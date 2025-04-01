@@ -1,7 +1,7 @@
 # JobRefMe
 
 <p align="center">
-  <img src="public/logo.png" alt="JobRefMe Logo" width="128" height="128">
+  <img src="icon.png" alt="JobRefMe Logo" width="128" height="128">
 </p>
 
 <p align="center">
