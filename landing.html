@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobRefMe - AI-Powered Job Referral Message Generator</title>
+    <link rel="icon" type="image/png" href="./public/icon.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom styles -->
+    <style>
+        .bg-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-gradient text-white">
+        <div class="container mx-auto px-6 py-16">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="./public/icon.png" alt="JobRefMe Logo" class="h-10 w-10 mr-3">
+                    <span class="text-xl font-bold">JobRefMe</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#features" class="hover:text-indigo-200 transition">Features</a>
+                    <a href="#installation" class="hover:text-indigo-200 transition">Installation</a>
+                    <a href="#guide" class="hover:text-indigo-200 transition">Guide</a>
+                    <a href="#repositories" class="hover:text-indigo-200 transition">Repositories</a>
+                </div>
+                <div>
+                    <a href="https://github.com/Prathmesh-Dhatrak/jobrefme" target="_blank" class="bg-white text-indigo-600 px-4 py-2 rounded-md font-medium hover:bg-indigo-100 transition">View on GitHub</a>
+                </div>
+            </nav>
+            
+            <div class="mt-20 max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Craft Perfect Referral Messages with AI</h1>
+                <p class="text-xl mb-10">JobRefMe uses Google's Gemini AI to generate personalized job referral request messages that maximize your chances of getting noticed.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#installation" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-indigo-100 transition">Install Extension</a>
+                    <a href="https://github.com/Prathmesh-Dhatrak/jobrefme" target="_blank" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition">View Source Code</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="fill-gray-50">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Why JobRefMe?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Two Generation Methods</h3>
+                    <p class="text-gray-600">Generate referrals from HireJobs.in job postings or from any selected job description text on any website.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI-Powered</h3>
+                    <p class="text-gray-600">Uses Google's Gemini AI to create tailored messages that highlight your relevant skills for each specific job.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-copy text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">One-Click Copy</h3>
+                    <p class="text-gray-600">Easily copy the generated message with one click to use in emails, LinkedIn messages, or any platform.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user-lock text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Google Integration</h3>
+                    <p class="text-gray-600">Sign in with your Google account to save preferences, templates, and securely store your API key.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-file-alt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom Templates</h3>
+                    <p class="text-gray-600">Create and manage your own referral message templates that match your personal style.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Privacy-Focused</h3>
+                    <p class="text-gray-600">Your API key is stored securely and no personal data is collected or sent to our servers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Installation Guide Section -->
+    <section id="installation" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Installation Guide</h2>
+            
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                <h3 class="text-2xl font-bold mb-6">Installing the Chrome Extension</h3>
+                
+                <div class="space-y-8">
+                    <!-- Step 1 -->
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                        <div>
+                            <h4 class="text-xl font-medium mb-2">Download the Extension</h4>
+                            <p class="text-gray-600 mb-4">Download the latest release of JobRefMe extension from GitHub.</p>
+                            <a href="https://github.com/Prathmesh-Dhatrak/jobrefme-extension/releases/latest" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                                <i class="fas fa-download"></i>
+                                Download JobRefMe Extension
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+                        <div>
+                            <h4 class="text-xl font-medium mb-2">Extract the ZIP File</h4>
+                            <p class="text-gray-600">Extract the downloaded ZIP file to a location on your computer that you won't accidentally delete.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+                        <div>
+                            <h4 class="text-xl font-medium mb-2">Load in Chrome</h4>
+                            <p class="text-gray-600 mb-3">Open Chrome and navigate to the extensions page by typing <code class="bg-gray-100 px-2 py-1 rounded">chrome://extensions/</code> in the address bar.</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                                <li>Enable "Developer mode" in the top-right corner</li>
+                                <li>Click "Load unpacked" and select the extracted folder</li>
+                                <li>The JobRefMe extension should now appear in your extensions list</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+                        <div>
+                            <h4 class="text-xl font-medium mb-2">Get a Gemini API Key</h4>
+                            <p class="text-gray-600 mb-3">You'll need a Google Gemini API key to use this extension.</p>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-4">
+                                <li>Visit <a href="https://ai.google.dev/" target="_blank" class="text-indigo-600 hover:underline">Google AI Studio</a></li>
+                                <li>Sign in with your Google account</li>
+                                <li>Go to "API keys" section</li>
+                                <li>Click "Create API Key"</li>
+                                <li>Copy the generated key for use in the extension</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">5</div>
+                        <div>
+                            <h4 class="text-xl font-medium mb-2">Complete Initial Setup</h4>
+                            <p class="text-gray-600">After installation, a welcome page will open automatically. Enter your Google Gemini API key and click "Save API Key".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Usage Guide Section -->
+    <section id="guide" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">How to Use JobRefMe</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Method 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold mb-6 text-indigo-600">Method 1: HireJobs.in Integration</h3>
+                        <ol class="space-y-6">
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">1</span>
+                                <div>
+                                    <p class="text-gray-700">Navigate to a job posting on HireJobs.in (e.g., https://hirejobs.in/jobs/abc123)</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">2</span>
+                                <div>
+                                    <p class="text-gray-700">Click on the JobRefMe extension icon in your browser toolbar</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">3</span>
+                                <div>
+                                    <p class="text-gray-700">Click the "Generate Referral Request" button</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">4</span>
+                                <div>
+                                    <p class="text-gray-700">Wait while the AI generates your personalized message</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">5</span>
+                                <div>
+                                    <p class="text-gray-700">Click "Copy" to copy the message to your clipboard</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <!-- Method 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold mb-6 text-indigo-600">Method 2: Universal Content Selection</h3>
+                        <ol class="space-y-6">
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">1</span>
+                                <div>
+                                    <p class="text-gray-700">On any job posting website, select the job description text</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">2</span>
+                                <div>
+                                    <p class="text-gray-700">Right-click on the selected text</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">3</span>
+                                <div>
+                                    <p class="text-gray-700">Choose "Generate Referral from Selected Content" from the context menu</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">4</span>
+                                <div>
+                                    <p class="text-gray-700">In the popup, click "Generate Referral Request"</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold">5</span>
+                                <div>
+                                    <p class="text-gray-700">Copy the generated message to use in your referral request</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-indigo-50 p-6 rounded-lg">
+                    <h4 class="text-xl font-bold mb-3 text-indigo-700">Pro Tips</h4>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Sign in with your Google account to save your templates and settings</li>
+                        <li>Create custom templates for different types of roles or companies</li>
+                        <li>You can regenerate a referral message if you're not satisfied with the initial result</li>
+                        <li>The extension works best with detailed job descriptions that include skills and qualifications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Repositories Section -->
+    <section id="repositories" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Project Repositories</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- JobRefMe Extension Repo -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-puzzle-piece text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Chrome Extension</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Browser extension that integrates with job boards to generate personalized referral requests directly while browsing.</p>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold mb-2">Technologies</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Chrome Extension API</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Prathmesh-Dhatrak/jobrefme-extension" target="_blank" class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 transition">
+                        <i class="fab fa-github"></i>
+                        View Repository
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- JobRefMe Backend Repo -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-server text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Backend Service</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Node.js backend service that powers the extension with job data extraction and AI-powered message generation.</p>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold mb-2">Technologies</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Express</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Google OAuth</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Gemini AI</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Prathmesh-Dhatrak/jobrefme-backend" target="_blank" class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 transition">
+                        <i class="fab fa-github"></i>
+                        View Repository
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-6">Want to contribute or report issues? Check out our main repository:</p>
+                <a href="https://github.com/Prathmesh-Dhatrak/jobrefme" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition">
+                    <i class="fab fa-github"></i>
+                    Main Repository
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Do I need to pay for using JobRefMe?</h3>
+                    <p class="text-gray-600">JobRefMe is completely free to use. However, you'll need your own Google Gemini API key, which has its own pricing model. Google typically offers free credits for new users.</p>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Which job boards are supported?</h3>
+                    <p class="text-gray-600">JobRefMe currently has direct integration with HireJobs.in. However, you can use the universal content selection method on any job board by selecting the job description text.</p>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Is my data secure?</h3>
+                    <p class="text-gray-600">Yes, your privacy is important to us. Your Gemini API key is stored securely in your browser's local storage, and no personal data is collected or sent to our servers.</p>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Can I customize the generated messages?</h3>
+                    <p class="text-gray-600">Yes, you can edit the generated messages before copying them. Additionally, if you sign in with your Google account, you can create and manage custom templates.</p>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-3">How do I report bugs or suggest features?</h3>
+                    <p class="text-gray-600">You can report bugs or suggest features by opening an issue on our <a href="https://github.com/Prathmesh-Dhatrak/jobrefme/issues" target="_blank" class="text-indigo-600 hover:underline">GitHub repository</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <img src="./public/icon.png" alt="JobRefMe Logo" class="h-8 w-8 mr-3">
+                        <span class="text-lg font-bold">JobRefMe</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">AI-powered job referral message generator</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3">Links</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                            <li><a href="#installation" class="hover:text-white transition">Installation</a></li>
+                            <li><a href="#guide" class="hover:text-white transition">Guide</a></li>
+                            <li><a href="#repositories" class="hover:text-white transition">Repositories</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3">GitHub</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="https://github.com/Prathmesh-Dhatrak/jobrefme" target="_blank" class="hover:text-white transition">Main Repository</a></li>
+                            <li><a href="https://github.com/Prathmesh-Dhatrak/jobrefme-extension" target="_blank" class="hover:text-white transition">Extension Repository</a></li>
+                            <li><a href="https://github.com/Prathmesh-Dhatrak/jobrefme-backend" target="_blank" class="hover:text-white transition">Backend Repository</a></li>
+                            <li><a href="https://github.com/Prathmesh-Dhatrak/jobrefme/issues" target="_blank" class="hover:text-white transition">Report Issues</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3">Connect</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="https://prathmeshdhatrak.com" target="_blank" class="hover:text-white transition">Developer Website</a></li>
+                            <li><a href="https://linkedin.com/in/prathmesh-dhatrak" target="_blank" class="hover:text-white transition">LinkedIn</a></li>
+                            <li><a href="https://github.com/Prathmesh-Dhatrak" target="_blank" class="hover:text-white transition">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-6 border-t border-gray-800 text-center">
+                <p class="text-gray-500">© 2025 JobRefMe. All rights reserved.</p>
+                <p class="text-gray-500 mt-1">Made with ❤️ by <a href="https://prathmeshdhatrak.com" target="_blank" class="text-gray-400 hover:text-white transition">Prathmesh Dhatrak</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom Scripts -->
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
